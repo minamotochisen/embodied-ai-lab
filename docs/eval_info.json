@@ -1,0 +1,56 @@
+{
+  "per_task": [
+    {
+      "task_group": "pusht",
+      "task_id": 0,
+      "metrics": {
+        "sum_rewards": [
+          141.95875976288585,
+          40.80508830369672,
+          189.91932452996076
+        ],
+        "max_rewards": [
+          0.9819594897125283,
+          0.5891007649231587,
+          1.0
+        ],
+        "successes": [
+          false,
+          false,
+          true
+        ],
+        "video_paths": [
+          "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_0.mp4",
+          "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_1.mp4",
+          "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_2.mp4"
+        ]
+      }
+    }
+  ],
+  "per_group": {
+    "pusht": {
+      "avg_sum_reward": 124.22772419884778,
+      "avg_max_reward": 0.8570200848785623,
+      "pc_success": 33.33333333333333,
+      "n_episodes": 3,
+      "video_paths": [
+        "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_0.mp4",
+        "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_1.mp4",
+        "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_2.mp4"
+      ]
+    }
+  },
+  "overall": {
+    "avg_sum_reward": 124.22772419884778,
+    "avg_max_reward": 0.8570200848785623,
+    "pc_success": 33.33333333333333,
+    "n_episodes": 3,
+    "eval_s": 74.71567678451538,
+    "eval_ep_s": 24.90522559483846,
+    "video_paths": [
+      "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_0.mp4",
+      "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_1.mp4",
+      "D:\\\u5177\u8eab\u667a\u80fd-lab\\outputs\\pusht_eval\\videos\\pusht_0\\eval_episode_2.mp4"
+    ]
+  }
+}

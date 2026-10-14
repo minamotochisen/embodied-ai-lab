@@ -1,0 +1,186 @@
+WARNING:root:'torchcodec' is not available in your platform, falling back to 'pyav' as a default decoder
+WARNING:root:'torchcodec' is not available in your platform, falling back to 'pyav' as a default decoder
+INFO 2026-09-15 17:29:51 ot_train.py:197 {'batch_size': 8,
+ 'checkpoint_path': None,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'lerobot/svla_so101_pickplace',
+             'revision': None,
+             'root': None,
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'pyav'},
+ 'env': None,
+ 'eval': {'batch_size': 50, 'n_episodes': 50, 'use_async_envs': False},
+ 'eval_freq': 20000,
+ 'job_name': 'smolvla',
+ 'log_freq': 10,
+ 'num_workers': 0,
+ 'optimizer': {'betas': [0.9, 0.95],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 0.0001,
+               'type': 'adamw',
+               'weight_decay': 1e-10},
+ 'output_dir': 'D:\\具身智能-lab\\outputs\\smolvla_ft2',
+ 'peft': None,
+ 'policy': {'adapt_to_pi_aloha': False,
+            'add_image_special_tokens': False,
+            'attention_mode': 'cross_attn',
+            'chunk_size': 50,
+            'compile_mode': 'max-autotune',
+            'compile_model': False,
+            'device': 'cuda',
+            'empty_cameras': 0,
+            'expert_width_multiplier': 0.75,
+            'freeze_vision_encoder': True,
+            'input_features': {'observation.images.camera1': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.camera2': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.camera3': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [6],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'license': None,
+            'load_vlm_weights': True,
+            'max_action_dim': 32,
+            'max_period': 4.0,
+            'max_state_dim': 32,
+            'min_period': 0.004,
+            'n_action_steps': 50,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>},
+            'num_expert_layers': 0,
+            'num_steps': 10,
+            'num_vlm_layers': 16,
+            'optimizer_betas': [0.9, 0.95],
+            'optimizer_eps': 1e-08,
+            'optimizer_grad_clip_norm': 10.0,
+            'optimizer_lr': 0.0001,
+            'optimizer_weight_decay': 1e-10,
+            'output_features': {'action': {'shape': [6],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'pad_language_to': 'max_length',
+            'prefix_length': 0,
+            'pretrained_path': 'D:\\具身智能-lab\\models\\smolvla_base',
+            'private': None,
+            'push_to_hub': False,
+            'repo_id': None,
+            'resize_imgs_with_padding': [512, 512],
+            'rtc_config': None,
+            'scheduler_decay_lr': 2.5e-06,
+            'scheduler_decay_steps': 30000,
+            'scheduler_warmup_steps': 1000,
+            'self_attn_every_n_layers': 2,
+            'tags': None,
+            'tokenizer_max_length': 48,
+            'train_expert_only': True,
+            'train_state_proj': True,
+            'type': 'smolvla',
+            'use_amp': False,
+            'use_cache': True,
+            'use_delta_joint_actions_aloha': False,
+            'use_peft': False,
+            'vlm_model_name': 'HuggingFaceTB/SmolVLM2-500M-Video-Instruct'},
+ 'rabc_epsilon': 1e-06,
+ 'rabc_head_mode': 'sparse',
+ 'rabc_kappa': 0.01,
+ 'rabc_progress_path': None,
+ 'rename_map': {'observation.images.side': 'observation.images.camera1',
+                'observation.images.up': 'observation.images.camera2'},
+ 'resume': False,
+ 'save_checkpoint': True,
+ 'save_freq': 75,
+ 'scheduler': {'decay_lr': 2.5e-06,
+               'num_decay_steps': 30000,
+               'num_warmup_steps': 1000,
+               'peak_lr': 0.0001,
+               'type': 'cosine_decay_with_warmup'},
+ 'seed': 1000,
+ 'steps': 150,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'use_rabc': False,
+ 'wandb': {'disable_artifact': False,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'run_id': None}}
+INFO 2026-09-15 17:29:51 ot_train.py:205 Logs will be saved locally.
+INFO 2026-09-15 17:29:51 ot_train.py:217 Creating dataset
+INFO 2026-09-15 17:29:51 eo_utils.py:106 Using video codec: libsvtav1
+INFO 2026-09-15 17:29:51 ot_train.py:235 Creating policy
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-09-15 17:30:08 ot_train.py:290 Creating optimizer and scheduler
+INFO 2026-09-15 17:30:08 hedulers.py:105 Auto-scaling LR scheduler: num_training_steps (150) < num_decay_steps (30000). Scaling warmup: 1000 → 5, decay: 30000 → 150 (scale factor: 0.005)
+INFO 2026-09-15 17:30:08 ot_train.py:325 Output dir: D:\具身智能-lab\outputs\smolvla_ft2
+INFO 2026-09-15 17:30:08 ot_train.py:332 cfg.steps=150 (150)
+INFO 2026-09-15 17:30:08 ot_train.py:333 dataset.num_frames=11939 (12K)
+INFO 2026-09-15 17:30:08 ot_train.py:334 dataset.num_episodes=50
+INFO 2026-09-15 17:30:08 ot_train.py:337 Effective batch size: 8 x 1 = 8
+INFO 2026-09-15 17:30:08 ot_train.py:338 num_learnable_params=99880992 (100M)
+INFO 2026-09-15 17:30:08 ot_train.py:339 num_total_params=450046176 (450M)
+Training:   0%|          | 0/150 [00:00<?, ?step/s]INFO 2026-09-15 17:30:08 ot_train.py:403 Start offline training on a fixed dataset, with effective batch size: 8
+D:\Miniconda3\envs\embodied\lib\site-packages\torchvision\io\_video_deprecation_warning.py:9: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+Training:   1%|          | 1/150 [00:00<02:28,  1.00step/s]Training:   1%|▏         | 2/150 [00:01<01:34,  1.57step/s]Training:   2%|▏         | 3/150 [00:01<01:15,  1.95step/s]Training:   3%|▎         | 4/150 [00:02<01:06,  2.20step/s]Training:   3%|▎         | 5/150 [00:02<01:01,  2.36step/s]Training:   4%|▍         | 6/150 [00:02<00:58,  2.47step/s]Training:   5%|▍         | 7/150 [00:03<00:56,  2.55step/s]Training:   5%|▌         | 8/150 [00:03<00:56,  2.49step/s]Training:   6%|▌         | 9/150 [00:04<00:54,  2.56step/s]Training:   7%|▋         | 10/150 [00:04<00:53,  2.61step/s]INFO 2026-09-15 17:30:12 ot_train.py:435 step:10 smpl:80 ep:0 epch:0.01 loss:0.146 grdn:2.378 lr:8.3e-05 updt_s:0.208 data_s:0.228
+Training:   7%|▋         | 11/150 [00:04<00:51,  2.68step/s]Training:   8%|▊         | 12/150 [00:05<00:50,  2.72step/s]Training:   9%|▊         | 13/150 [00:05<00:49,  2.75step/s]Training:   9%|▉         | 14/150 [00:05<00:49,  2.77step/s]Training:  10%|█         | 15/150 [00:06<00:48,  2.79step/s]Training:  11%|█         | 16/150 [00:06<00:47,  2.82step/s]Training:  11%|█▏        | 17/150 [00:06<00:46,  2.84step/s]Training:  12%|█▏        | 18/150 [00:07<00:46,  2.85step/s]Training:  13%|█▎        | 19/150 [00:07<00:48,  2.71step/s]Training:  13%|█▎        | 20/150 [00:07<00:47,  2.72step/s]INFO 2026-09-15 17:30:16 ot_train.py:435 step:20 smpl:160 ep:1 epch:0.01 loss:0.128 grdn:1.658 lr:9.7e-05 updt_s:0.172 data_s:0.185
+Training:  14%|█▍        | 21/150 [00:08<00:46,  2.76step/s]Training:  15%|█▍        | 22/150 [00:08<00:46,  2.78step/s]Training:  15%|█▌        | 23/150 [00:09<00:45,  2.81step/s]Training:  16%|█▌        | 24/150 [00:09<00:44,  2.84step/s]Training:  17%|█▋        | 25/150 [00:09<00:43,  2.85step/s]Training:  17%|█▋        | 26/150 [00:10<00:43,  2.86step/s]Training:  18%|█▊        | 27/150 [00:10<00:43,  2.85step/s]Training:  19%|█▊        | 28/150 [00:10<00:42,  2.87step/s]Training:  19%|█▉        | 29/150 [00:11<00:42,  2.84step/s]Training:  20%|██        | 30/150 [00:11<00:44,  2.69step/s]INFO 2026-09-15 17:30:20 ot_train.py:435 step:30 smpl:240 ep:1 epch:0.02 loss:0.106 grdn:1.347 lr:9.3e-05 updt_s:0.172 data_s:0.183
+Training:  21%|██        | 31/150 [00:11<00:45,  2.64step/s]Training:  21%|██▏       | 32/150 [00:12<00:43,  2.71step/s]Training:  22%|██▏       | 33/150 [00:12<00:42,  2.75step/s]Training:  23%|██▎       | 34/150 [00:12<00:41,  2.81step/s]Training:  23%|██▎       | 35/150 [00:13<00:41,  2.80step/s]Training:  24%|██▍       | 36/150 [00:13<00:40,  2.82step/s]Training:  25%|██▍       | 37/150 [00:14<00:40,  2.82step/s]Training:  25%|██▌       | 38/150 [00:14<00:39,  2.85step/s]Training:  26%|██▌       | 39/150 [00:14<00:39,  2.83step/s]Training:  27%|██▋       | 40/150 [00:15<00:38,  2.85step/s]INFO 2026-09-15 17:30:23 ot_train.py:435 step:40 smpl:320 ep:1 epch:0.03 loss:0.095 grdn:1.238 lr:8.7e-05 updt_s:0.170 data_s:0.183
+Training:  27%|██▋       | 41/150 [00:15<00:38,  2.86step/s]Training:  28%|██▊       | 42/150 [00:15<00:37,  2.86step/s]Training:  29%|██▊       | 43/150 [00:16<00:37,  2.84step/s]Training:  29%|██▉       | 44/150 [00:16<00:37,  2.84step/s]Training:  30%|███       | 45/150 [00:16<00:36,  2.86step/s]Training:  31%|███       | 46/150 [00:17<00:36,  2.89step/s]Training:  31%|███▏      | 47/150 [00:17<00:35,  2.87step/s]Training:  32%|███▏      | 48/150 [00:17<00:35,  2.85step/s]Training:  33%|███▎      | 49/150 [00:18<00:35,  2.83step/s]Training:  33%|███▎      | 50/150 [00:18<00:35,  2.83step/s]INFO 2026-09-15 17:30:27 ot_train.py:435 step:50 smpl:400 ep:2 epch:0.03 loss:0.092 grdn:1.359 lr:7.9e-05 updt_s:0.167 data_s:0.183
+Training:  34%|███▍      | 51/150 [00:18<00:36,  2.75step/s]Training:  35%|███▍      | 52/150 [00:19<00:35,  2.77step/s]Training:  35%|███▌      | 53/150 [00:19<00:34,  2.80step/s]Training:  36%|███▌      | 54/150 [00:20<00:34,  2.81step/s]Training:  37%|███▋      | 55/150 [00:20<00:33,  2.84step/s]Training:  37%|███▋      | 56/150 [00:20<00:33,  2.84step/s]Training:  38%|███▊      | 57/150 [00:21<00:32,  2.85step/s]Training:  39%|███▊      | 58/150 [00:21<00:32,  2.87step/s]Training:  39%|███▉      | 59/150 [00:21<00:31,  2.87step/s]Training:  40%|████      | 60/150 [00:22<00:31,  2.88step/s]INFO 2026-09-15 17:30:30 ot_train.py:435 step:60 smpl:480 ep:2 epch:0.04 loss:0.081 grdn:1.091 lr:7.1e-05 updt_s:0.168 data_s:0.183
+Training:  41%|████      | 61/150 [00:22<00:30,  2.89step/s]Training:  41%|████▏     | 62/150 [00:22<00:30,  2.85step/s]Training:  42%|████▏     | 63/150 [00:23<00:30,  2.88step/s]Training:  43%|████▎     | 64/150 [00:23<00:30,  2.83step/s]Training:  43%|████▎     | 65/150 [00:23<00:30,  2.83step/s]Training:  44%|████▍     | 66/150 [00:24<00:29,  2.83step/s]Training:  45%|████▍     | 67/150 [00:24<00:29,  2.86step/s]Training:  45%|████▌     | 68/150 [00:24<00:29,  2.81step/s]Training:  46%|████▌     | 69/150 [00:25<00:30,  2.63step/s]Training:  47%|████▋     | 70/150 [00:25<00:29,  2.68step/s]INFO 2026-09-15 17:30:34 ot_train.py:435 step:70 smpl:560 ep:2 epch:0.05 loss:0.069 grdn:1.073 lr:6.1e-05 updt_s:0.176 data_s:0.184
+Training:  47%|████▋     | 71/150 [00:26<00:29,  2.71step/s]Training:  48%|████▊     | 72/150 [00:26<00:28,  2.73step/s]Training:  49%|████▊     | 73/150 [00:26<00:27,  2.76step/s]Training:  49%|████▉     | 74/150 [00:27<00:27,  2.80step/s]Training:  50%|█████     | 75/150 [00:27<00:26,  2.82step/s]INFO 2026-09-15 17:30:36 ot_train.py:455 Checkpoint policy after step 75
+Training:  51%|█████     | 76/150 [00:28<00:37,  1.97step/s]Training:  51%|█████▏    | 77/150 [00:28<00:33,  2.18step/s]Training:  52%|█████▏    | 78/150 [00:29<00:30,  2.36step/s]Training:  53%|█████▎    | 79/150 [00:29<00:28,  2.49step/s]Training:  53%|█████▎    | 80/150 [00:29<00:26,  2.61step/s]INFO 2026-09-15 17:30:38 ot_train.py:435 step:80 smpl:640 ep:3 epch:0.05 loss:0.082 grdn:1.351 lr:5.1e-05 updt_s:0.165 data_s:0.183
+Training:  54%|█████▍    | 81/150 [00:30<00:25,  2.67step/s]Training:  55%|█████▍    | 82/150 [00:30<00:24,  2.73step/s]Training:  55%|█████▌    | 83/150 [00:30<00:25,  2.65step/s]Training:  56%|█████▌    | 84/150 [00:31<00:24,  2.72step/s]Training:  57%|█████▋    | 85/150 [00:31<00:23,  2.75step/s]Training:  57%|█████▋    | 86/150 [00:31<00:22,  2.79step/s]Training:  58%|█████▊    | 87/150 [00:32<00:22,  2.83step/s]Training:  59%|█████▊    | 88/150 [00:32<00:21,  2.86step/s]Training:  59%|█████▉    | 89/150 [00:32<00:21,  2.87step/s]Training:  60%|██████    | 90/150 [00:33<00:20,  2.87step/s]INFO 2026-09-15 17:30:41 ot_train.py:435 step:90 smpl:720 ep:3 epch:0.06 loss:0.073 grdn:0.955 lr:4.1e-05 updt_s:0.170 data_s:0.181
+Training:  61%|██████    | 91/150 [00:33<00:20,  2.84step/s]Training:  61%|██████▏   | 92/150 [00:33<00:20,  2.83step/s]Training:  62%|██████▏   | 93/150 [00:34<00:19,  2.86step/s]Training:  63%|██████▎   | 94/150 [00:34<00:20,  2.72step/s]Training:  63%|██████▎   | 95/150 [00:35<00:19,  2.78step/s]Training:  64%|██████▍   | 96/150 [00:35<00:19,  2.81step/s]Training:  65%|██████▍   | 97/150 [00:35<00:19,  2.68step/s]Training:  65%|██████▌   | 98/150 [00:36<00:19,  2.69step/s]Training:  66%|██████▌   | 99/150 [00:36<00:18,  2.75step/s]Training:  67%|██████▋   | 100/150 [00:36<00:17,  2.78step/s]INFO 2026-09-15 17:30:45 ot_train.py:435 step:100 smpl:800 ep:3 epch:0.07 loss:0.055 grdn:0.778 lr:3.1e-05 updt_s:0.178 data_s:0.184
+Training:  67%|██████▋   | 101/150 [00:37<00:17,  2.78step/s]Training:  68%|██████▊   | 102/150 [00:37<00:17,  2.78step/s]Training:  69%|██████▊   | 103/150 [00:37<00:16,  2.81step/s]Training:  69%|██████▉   | 104/150 [00:38<00:16,  2.82step/s]Training:  70%|███████   | 105/150 [00:38<00:15,  2.82step/s]Training:  71%|███████   | 106/150 [00:39<00:15,  2.84step/s]Training:  71%|███████▏  | 107/150 [00:39<00:15,  2.83step/s]Training:  72%|███████▏  | 108/150 [00:39<00:14,  2.83step/s]Training:  73%|███████▎  | 109/150 [00:40<00:14,  2.81step/s]Training:  73%|███████▎  | 110/150 [00:40<00:14,  2.83step/s]INFO 2026-09-15 17:30:48 ot_train.py:435 step:110 smpl:880 ep:4 epch:0.07 loss:0.054 grdn:0.724 lr:2.2e-05 updt_s:0.165 data_s:0.187
+Training:  74%|███████▍  | 111/150 [00:40<00:13,  2.83step/s]Training:  75%|███████▍  | 112/150 [00:41<00:13,  2.84step/s]Training:  75%|███████▌  | 113/150 [00:41<00:12,  2.85step/s]Training:  76%|███████▌  | 114/150 [00:41<00:12,  2.86step/s]Training:  77%|███████▋  | 115/150 [00:42<00:12,  2.88step/s]Training:  77%|███████▋  | 116/150 [00:42<00:11,  2.90step/s]Training:  78%|███████▊  | 117/150 [00:42<00:11,  2.90step/s]Training:  79%|███████▊  | 118/150 [00:43<00:11,  2.91step/s]Training:  79%|███████▉  | 119/150 [00:43<00:11,  2.71step/s]Training:  80%|████████  | 120/150 [00:44<00:11,  2.62step/s]INFO 2026-09-15 17:30:52 ot_train.py:435 step:120 smpl:960 ep:4 epch:0.08 loss:0.064 grdn:0.880 lr:1.5e-05 updt_s:0.178 data_s:0.181
+Training:  81%|████████  | 121/150 [00:44<00:11,  2.56step/s]Training:  81%|████████▏ | 122/150 [00:44<00:11,  2.51step/s]Training:  82%|████████▏ | 123/150 [00:45<00:10,  2.47step/s]Training:  83%|████████▎ | 124/150 [00:45<00:10,  2.55step/s]Training:  83%|████████▎ | 125/150 [00:46<00:10,  2.41step/s]Training:  84%|████████▍ | 126/150 [00:46<00:09,  2.53step/s]Training:  85%|████████▍ | 127/150 [00:46<00:08,  2.64step/s]Training:  85%|████████▌ | 128/150 [00:47<00:08,  2.71step/s]Training:  86%|████████▌ | 129/150 [00:47<00:07,  2.75step/s]Training:  87%|████████▋ | 130/150 [00:47<00:07,  2.82step/s]INFO 2026-09-15 17:30:56 ot_train.py:435 step:130 smpl:1K ep:4 epch:0.09 loss:0.072 grdn:0.988 lr:8.9e-06 updt_s:0.187 data_s:0.192
+Training:  87%|████████▋ | 131/150 [00:48<00:06,  2.86step/s]Training:  88%|████████▊ | 132/150 [00:48<00:06,  2.86step/s]Training:  89%|████████▊ | 133/150 [00:48<00:05,  2.87step/s]Training:  89%|████████▉ | 134/150 [00:49<00:05,  2.88step/s]Training:  90%|█████████ | 135/150 [00:49<00:05,  2.90step/s]Training:  91%|█████████ | 136/150 [00:49<00:04,  2.91step/s]Training:  91%|█████████▏| 137/150 [00:50<00:04,  2.89step/s]Training:  92%|█████████▏| 138/150 [00:50<00:04,  2.87step/s]Training:  93%|█████████▎| 139/150 [00:50<00:03,  2.89step/s]Training:  93%|█████████▎| 140/150 [00:51<00:03,  2.88step/s]INFO 2026-09-15 17:30:59 ot_train.py:435 step:140 smpl:1K ep:5 epch:0.09 loss:0.068 grdn:0.913 lr:4.8e-06 updt_s:0.166 data_s:0.178
+Training:  94%|█████████▍| 141/150 [00:51<00:03,  2.88step/s]Training:  95%|█████████▍| 142/150 [00:51<00:02,  2.86step/s]Training:  95%|█████████▌| 143/150 [00:52<00:02,  2.84step/s]Training:  96%|█████████▌| 144/150 [00:52<00:02,  2.85step/s]Training:  97%|█████████▋| 145/150 [00:53<00:01,  2.85step/s]Training:  97%|█████████▋| 146/150 [00:53<00:01,  2.87step/s]Training:  98%|█████████▊| 147/150 [00:53<00:01,  2.89step/s]Training:  99%|█████████▊| 148/150 [00:54<00:00,  2.89step/s]Training:  99%|█████████▉| 149/150 [00:54<00:00,  2.87step/s]Training: 100%|██████████| 150/150 [00:54<00:00,  2.89step/s]INFO 2026-09-15 17:31:03 ot_train.py:435 step:150 smpl:1K ep:5 epch:0.10 loss:0.060 grdn:0.811 lr:2.8e-06 updt_s:0.166 data_s:0.181
+INFO 2026-09-15 17:31:03 ot_train.py:455 Checkpoint policy after step 150
+Training: 100%|██████████| 150/150 [00:55<00:00,  2.72step/s]
+INFO 2026-09-15 17:31:03 ot_train.py:529 End of training
